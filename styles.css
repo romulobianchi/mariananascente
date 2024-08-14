@@ -1,30 +1,42 @@
-/* Reset básico para margin e padding */
+/* Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html, body {
-    height: 100%; /* Garantir que o body e html tenham 100% da altura da tela */
-    margin: 0; /* Remover margem padrão do body */
-}
-
+/* Base styles */
 body {
     font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Espaçar o conteúdo para que o rodapé fique no fundo */
+}
+
+html, body {
+    height: 100%;
+    background-image: url('img/background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.conteiner {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    background-image: url('img/background.jpg'); /* Imagem de fundo no subdiretório 'img' */
-    background-size: cover; /* Ajusta a imagem para cobrir toda a tela */
-    background-repeat: repeat /* */
-    background-position: center; /* Centraliza a imagem na tela */
+    width: 100%;
+    height: 100%; /* Ensure container occupies the full height */
 }
 
 header {
     width: 100%;
-    background-color: rgba(50, 50, 50, 0.8); /* Cinza escuro com transparência */
+    background-color: rgba(50, 50, 50, 0.8); /* Dark gray with transparency */
     padding: 10px 0;
     position: fixed;
     top: 0;
@@ -46,7 +58,7 @@ nav a {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    padding: 5px 10px; /* Adicionado para espaçamento */
+    padding: 5px 10px;
 }
 
 main {
@@ -54,27 +66,52 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    flex: 1; /* Permite que o main ocupe o espaço restante */
-    margin-top: 80px; /* Espaço para o cabeçalho fixo */
-    padding-bottom: 20px; /* Espaçamento inferior para evitar que o conteúdo se sobreponha ao rodapé */
+    flex: 1; /* Allow main to take up the remaining space */
+    margin-top: 80px; /* Space for the fixed header */
+    padding: 20px;
+    width: 100%;
 }
 
 .card_pai {
-    display: flex; 
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 80px; /* Ajustado para a imagem da foto que fica acima do card */
+    width: 100%;
+    margin-top: 80px;
+    position: relative;
+    padding: 20px;
 }
 
 .card {
-    background-color: rgba(255, 255, 255, 0.6); /* Fundo branco com transparência */
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.7); /* White with transparency */
     padding: 20px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
-    max-width: 300px;
+    max-width: 350px;
     width: 100%;
     position: relative;
+    opacity: 0;
+    transform: translateX(-100px);
+    animation: slideInLeft 1s ease-out forwards 0.5s;
+}
+.conteiner_botoes {
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */ 
+    /* background-color: rgba(255, 255, 255, 0.6); /* White with transparency */ 
+    padding: 20px; 
+    /* border-radius: 10px;*/ 
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); */ 
+    text-align: center;
+    max-width: 250px;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    margin: 0 auto;
+    transform: translateX(-100px);
+    animation: slideInLeft 1s ease-out forwards 0.5s;
 }
 
 .foto {
@@ -88,7 +125,9 @@ main {
     position: absolute;
     top: -85px;
     left: 50%;
-    transform: translateX(-50%);
+    transform: translateX(100px) translateX(-50%);
+    opacity: 0;
+    animation: slideInRight 1s ease-out forwards 0.5s;
 }
 
 h1 {
@@ -97,31 +136,57 @@ h1 {
 }
 
 p {
-    font-size: 16px;
-    margin: 0 0 20px;
+    font-size: 15px;
+    margin: 10 0 10px;
 }
 
 .card a {
-    display: block;
-    margin: 10px 0;
+    display: inline-block;
     text-decoration: none;
     color: #fff;
-    background-color: #110e415b; /* Cor de fundo do botão */
-    padding: 10px 20px; /* Espaçamento interno */
-    border-radius: 15px; /* Arredondamento das bordas */
+    background-color: #1916415b; /* Button background color */
+    padding: 10px 20px;
+    border-radius: 15px;
     font-weight: bold;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombra do botão */
-    transition: background-color 0.3s; /* Transição suave */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.3s;
+    margin: 10px 0;
 }
 
 .card a:hover {
-    background-color: #0056b3; /* Cor de fundo ao passar o mouse */
+    background-color: #0056b3; /* Button hover color */
+    transform: scale(1.02);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
 footer {
     width: 100%;
-    background-color: rgba(50, 50, 50, 0.8); /* Cinza escuro com transparência */
+    background-color: rgba(50, 50, 50, 0.8); /* Dark gray with transparency */
     color: #fff;
     text-align: center;
-    padding: 20px 0; /* Maior espaçamento interno para o rodapé */
+    padding: 10px 0;
+}
+
+/* Animations */
+
+@keyframes slideInLeft {
+    from {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(-50%);
+        opacity: 1;
+    }
 }
