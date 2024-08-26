@@ -25,6 +25,9 @@ html, body {
     background-attachment: fixed;
 }
 
+img {
+    margin: 0 0;
+}
 .conteiner {
     display: flex;
     flex-direction: column;
@@ -84,12 +87,12 @@ main {
 
 .card {
     align-items: center;
-    background-color: rgba(255, 255, 255, 0.7); /* White with transparency */
+    background-color: rgba(250, 246, 244, 0.8); /* White with transparency */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    text-align: center;
-    max-width: 350px;
+    text-align: justify;
+    max-width: 960px;
     width: 100%;
     position: relative;
     opacity: 0;
@@ -132,12 +135,29 @@ main {
 
 h1 {
     font-size: 24px;
+    color: #301b3c;
     margin: 60px 0 10px;
+    text-align: center;
+}
+h2 {
+    font-size: 18px;
+    color: #301b3c;
+    margin: 10px 0 10px;
+    text-align: center;
+}
+h3 {
+    font-size: 15px;
+    color: #301b3c;
+    margin: 10px 0 10px;
+    text-align: center;
 }
 
 p {
     font-size: 15px;
-    margin: 10 0 10px;
+    color: #301b3c;
+    margin: 20 0 10px;
+    margin-top: 20px;
+    text-indent: 2em;
 }
 
 .card a {
@@ -161,7 +181,8 @@ p {
 
 footer {
     width: 100%;
-    background-color: rgba(50, 50, 50, 0.8); /* Dark gray with transparency */
+    background-color: rgba(50, 50, 50, 0.7); /* Dark gray with transparency */
+    font-size: 15px;
     color: #fff;
     text-align: center;
     padding: 10px 0;
