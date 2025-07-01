@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ajude a Aurora 🐱</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Ajude a Aurora 🐾</h1>
+      <p class="sub">Nossa vovozinha felina precisa de você!</p>
+    </header>
+
+    <section class="content">
+      <img src="img/aurora.jpg" alt="Aurora, gatinha em recuperação" class="cat-img" />
+
+      <div class="text">
+        <p>Aurora tem 15 anos e é uma guerreira. Recentemente passou por uma cirurgia para remoção de dois tumores e agora enfrenta uma recuperação delicada. Com o frio e seu quadro renal, está com inflamação pulmonar e dificuldade respiratória. 🥺</p>
+        <p>Estamos fazendo tudo ao nosso alcance, mas os custos com exames, cirurgia e agora a soroterapia diária têm sido altos.</p>
+        <p>Qualquer ajuda faz diferença. Aurora tem muita vontade de viver e está nos ensinando o que é resiliência. 💖</p>
+      </div>
+    </section>
+
+    <section class="donate">
+      <h2>Como doar:</h2>
+
+      <div class="pix-box">
+        <p><strong>Pix por e-mail:</strong></p>
+        <div class="copy-area">
+          <input type="text" id="pix-email" value="pixmarianaeromulo@gmail.com" readonly>
+          <button onclick="copyToClipboard('pix-email')">Copiar</button>
+        </div>
+
+        <p><strong>Pix Copia e Cola:</strong></p>
+        <div class="copy-area">
+          <input type="text" id="pix-copia" value="00020126700014br.gov.bcb.pix0116pixmarianaeromulo@gmail5204000053039865405100..." readonly>
+          <button onclick="copyToClipboard('pix-copia')">Copiar</button>
+        </div>
+
+        <p><strong>Ou escaneie o QR Code:</strong></p>
+        <img src="img/qrcode-pix.png" alt="QR Code para Pix" class="qrcode" />
+      </div>
+    </section>
+
+    <footer>
+      <p>Com carinho, gratidão e esperança. 🌸</p>
+    </footer>
+  </div>
+
+  <script>
+    function copyToClipboard(elementId) {
+      const input = document.getElementById(elementId);
+      input.select();
+      input.setSelectionRange(0, 99999); // mobile
+      document.execCommand("copy");
+      alert("Copiado para a área de transferência!");
+    }
+  </script>
+</body>
+</html>
