@@ -1,0 +1,101 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #fefaf5;
+  color: #443c3c;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+header h1 {
+  color: #a86e6e; /* tom do rosa da roupinha */
+  font-size: 2em;
+  margin-bottom: 5px;
+}
+
+header .sub {
+  color: #6c5b53;
+  font-style: italic;
+}
+
+.cat-img {
+  width: 100%;
+  max-height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(100, 80, 60, 0.2);
+  margin-bottom: 20px;
+}
+
+.text p {
+  line-height: 1.6;
+  margin-bottom: 15px;
+  background-color: #fff9f6;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(150, 130, 110, 0.1);
+}
+
+.donate {
+  margin-top: 40px;
+}
+
+.donate h2 {
+  color: #7c4f4f;
+  margin-bottom: 15px;
+}
+
+.pix-box p {
+  margin-bottom: 8px;
+}
+
+.copy-area {
+  display: flex;
+  margin-bottom: 15px;
+}
+
+.copy-area input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #d0c4ba;
+  border-radius: 6px 0 0 6px;
+  font-size: 0.95em;
+  background-color: #fdfdfc;
+}
+
+.copy-area button {
+  padding: 10px 16px;
+  background-color: #d48c8c;
+  color: white;
+  border: none;
+  border-radius: 0 6px 6px 0;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.copy-area button:hover {
+  background-color: #bb6c6c;
+}
+
+.qrcode {
+  width: 180px;
+  margin-top: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+footer {
+  text-align: center;
+  margin-top: 50px;
+  font-size: 0.9em;
+  color: #6f5e5e;
+}
