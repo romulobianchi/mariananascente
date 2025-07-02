@@ -87,10 +87,15 @@ header .sub {
 }
 
 .qrcode {
-  width: 180px;
-  margin-top: 10px;
-  border: 1px solid #ddd;
-  border-radius: 8px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.qrcode img {
+  max-width: 300px;
+  width: 100%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
 }
 
 footer {
