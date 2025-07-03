@@ -58,5 +58,32 @@
         &copy; 2024 Mariana Nascente. Todos os direitos reservados.
         <!-- <p><a href="#">Termos de Serviço</a> | <a href="#">Poltica de Privacidade</a></p> -->
     </footer>
+    <script>
+  // Configuração do namespace e chave única do contador
+  const namespace = "dueto_aurora"; // você pode personalizar
+  const key = "acessos";
+
+  // Faz o incremento da contagem
+  fetch(`https://api.countapi.xyz/hit/${namespace}/${key}`)
+    .then(res => res.json())
+    .then(data => {
+      // Só exibe a contagem se estiver com o parâmetro secreto na URL (?admin=true)
+      if (window.location.search.includes("admin=true")) {
+        const counter = document.createElement("div");
+        counter.textContent = `Acessos: ${data.value}`;
+        counter.style.position = "fixed";
+        counter.style.bottom = "10px";
+        counter.style.right = "10px";
+        counter.style.background = "rgba(255, 255, 255, 0.9)";
+        counter.style.padding = "8px 14px";
+        counter.style.borderRadius = "10px";
+        counter.style.fontSize = "13px";
+        counter.style.fontFamily = "sans-serif";
+        counter.style.color = "#333";
+        counter.style.boxShadow = "0 2px 6px rgba(0, 0, 0, 0.2)";
+        document.body.appendChild(counter);
+      }
+    });
+</script>
 </body>
 </html>
